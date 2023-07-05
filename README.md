@@ -19,8 +19,6 @@ cv2.imwrite('cropped.jpg', cropped_img)
 ## Citation
 If you use this code in your research, please cite the following papers:
 
-- Y.-H. Li, I-C. Lo, and H. H. Chen, “Deep face rectification for 360 dual-fisheye cameras,” IEEE Trans. Image Process., vol. 30, DOI 10.1109/TIP.2020.3019661, pp. 264-276, 2021
-- I-C. Lo, K.-T. Shih, and H. H. Chen, “Efficient and accurate stitching for 360° dual-fisheye images and videos,” IEEE Trans. Image Process., vol. 31, pp. 251-262, DOI: 10.1109/TIP.20, Jan. 2022
 - Y.-C. Lo, C.-C. Huang, Y.-F. Tsai, I-C. Lo, A.-Y. Wu, and H. H. Chen, “Face recognition for fisheye images,” in Proc. IEEE Int. Conf. Image Process., pp. 146-150, Oct. 2022
 
 ## License
