@@ -10,13 +10,13 @@ x and y are offsets applied to the image (default is 0).
 f is the focal length that controls the intensity of the warping effect (default is 100).
 The function returns the warped image and a version cropped to the original image size.
 # Example
-'''
+``` python
 import cv2
 img = cv2.imread('input.jpg')
 warped_img, cropped_img = warp(img, x=10, y=10, f=100)
 cv2.imwrite('warped.jpg', warped_img)
 cv2.imwrite('cropped.jpg', cropped_img)
-'''
+``` 
 # Citation
 If you use this code in your research, please cite the following papers:
 
