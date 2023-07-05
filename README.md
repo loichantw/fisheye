@@ -1,4 +1,4 @@
-# fisheye-warping
+# Useful Tool
 ## Spherical Projection Image Warping
 This repository contains a Python implementation of a spherical projection image warping algorithm, which is a useful tool for warping fisheye images. The code takes an input image and parameters for offsets and a focal length, and applies a spherical projection to warp the image.
 
