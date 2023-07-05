@@ -1,4 +1,30 @@
-# fisheye-warping
-Spherical Projection Image Warping
+## fisheye-warping
+# Spherical Projection Image Warping
+This repository contains a Python implementation of a spherical projection image warping algorithm, which is a useful tool for warping fisheye images. The code takes an input image and parameters for offsets and a focal length, and applies a spherical projection to warp the image.
 
-The provided code implements a spherical projection image warping algorithm. It takes an input image and parameters for offsets (x, y) and a focal length (f). Each pixel in the input image is projected onto a sphere, with the pixel's distance from the image center determining the angle of projection (theta), and the direction from the center determining the azimuthal angle (phi). The pixel is then mapped to a new location in the output image based on these angles and the focal length, creating a warped effect. The algorithm returns the warped image and a version cropped to the original image size.
+# Usage
+The main function is warp(img, x=0, y=0, f=100), where:
+
+img is the input image (a numpy array).
+x and y are offsets applied to the image (default is 0).
+f is the focal length that controls the intensity of the warping effect (default is 100).
+The function returns the warped image and a version cropped to the original image size.
+# Example
+'''
+import cv2
+img = cv2.imread('input.jpg')
+warped_img, cropped_img = warp(img, x=10, y=10, f=100)
+cv2.imwrite('warped.jpg', warped_img)
+cv2.imwrite('cropped.jpg', cropped_img)
+'''
+# Citation
+If you use this code in your research, please cite the following papers:
+
+Y.-H. Huang and H. H. Chen, “Deep face recognition for dim images,” Pattern Recognition, vol. 126, https://doi.org/10.1016/j.patcog.2022.108580, Feb. 2022
+I-C. Lo, K.-T. Shih, and H. H. Chen, “Efficient and accurate stitching for 360° dual-fisheye images and videos,” IEEE Trans. Image Process., vol. 31, pp. 251-262, DOI: 10.1109/TIP.20, Jan. 2022
+Y.-C. Lo, C.-C. Huang, Y.-F. Tsai, I-C. Lo, A.-Y. Wu, and H. H. Chen, “Face recognition for fisheye images,” in Proc. IEEE Int. Conf. Image Process., pp. 146-150, Oct. 2022
+
+# License
+This project is licensed under the terms of the MIT license.
+
+
