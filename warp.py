@@ -16,16 +16,19 @@ def warp(img, x=0, y=0, f=100):
     numpy array: The warped image cropped to the original image size.
     """
     
+    # Get the dimensions of the image
+    height, width, _ = img.shape
+    
     # Initialize the projection plane
-    proj_plane = np.zeros((224+abs(x), 224+abs(y), 3), dtype = np.uint8)
+    proj_plane = np.zeros((height+abs(x), width+abs(y), 3), dtype = np.uint8)
     
     # Calculate the center of the image
-    x_mid = img.shape[0]/2
-    y_mid = img.shape[1]/2
+    x_mid = height/2
+    y_mid = width/2
     
     # Iterate over each pixel in the image
-    for pix_i in range(img.shape[0]):
-        for pix_j in range(img.shape[1]):
+    for pix_i in range(height):
+        for pix_j in range(width):
             
             # Calculate the angles theta and phi
             theta = math.atan(np.sqrt(abs(x-x_mid+pix_i)**2 + abs(y-y_mid+pix_j)**2)/f)
@@ -50,4 +53,4 @@ def warp(img, x=0, y=0, f=100):
     start_y = 0 if y < 0 else y
     
     # Return the warped image and the cropped image
-    return proj_plane, proj_plane[start_x:start_x+224,start_y:start_y+224]
+    return proj_plane, proj_plane[start_x:start_x+height,start_y:start_y+width]
